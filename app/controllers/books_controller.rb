@@ -6,7 +6,7 @@ class BooksController < ApplicationController
 
   def show
     book = Book.find(params[:id])
-    render json: book, include: :users, status: :ok
+    render json: book, include: :readers, status: :ok
   end
 
   def create
