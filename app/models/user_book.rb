@@ -1,4 +1,9 @@
 class UserBook < ApplicationRecord
   belongs_to :book
   belongs_to :user
+
+  validates :book_id, uniqueness: {
+    scope: :user_id,
+    message: 'book can only be marked read once'
+  }
 end
