@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-rescue_from ActiveRecord:;InvalidRecord, with: :render_unprocessable_entity
+rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
   def current_user
     User.first
