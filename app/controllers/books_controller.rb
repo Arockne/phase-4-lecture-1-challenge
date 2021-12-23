@@ -9,7 +9,10 @@ class BooksController < ApplicationController
     render json: book, include: :users, status: :ok
   end
 
-
+  def create
+    book = Book.create!(book_params)
+    render json: book, status: :created
+  end
 
   private
 
