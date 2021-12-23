@@ -4,6 +4,6 @@ class UserBook < ApplicationRecord
 
   validates :book_id, uniqueness: {
     scope: :user_id,
-    message: 'book can only be marked read once'
+    message: 'Cannot have the same book twice in reading list'
   }
 end
