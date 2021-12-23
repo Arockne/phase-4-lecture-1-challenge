@@ -5,6 +5,6 @@ class Book < ApplicationRecord
   validates :title, :author, :description, presence: true
   validates :title, uniqueness: { 
     scope: :author,
-    message: 'can\'t have the same title twic with the same author'
+    message: 'can\'t have the same title twice with the same author'
   }
 end
