@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+puts 'Seeding'
 sam = User.create(username: 'sam', email: 'hello@yahoo.com', bio: 'Here I am')
 bob = User.create(username: 'bob', email: 'iambob@gmail.com', bio: 'I like turtles')
 
@@ -15,5 +15,7 @@ bluesky = Book.create(title: 'bluesky', author: 'bluesky', description: 'to jot 
 hello = Book.create(title: 'itsme', author: 'I can see it in your eyes', description: 'Overcome Imposter Syndrome')
 
 
-sam.books = [codeschool, bluesky, hello]
-bob.books = [bluesky, codeschool]
+sam.books = [hello]
+bob.books = [codeschool, bluesky, hello]
+
+puts 'Finished seeding'
