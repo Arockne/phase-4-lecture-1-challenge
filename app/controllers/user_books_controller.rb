@@ -6,13 +6,13 @@ class UserBooksController < ApplicationController
   end
 
   def create
-    user_book = current_user.books.create!(user_book_params)
-    render json: user_book, status: :created
+    user_book = current_user.user_books.create!(user_book_params)
+    render json: user_book.book, status: :created
   end
 
   private
 
   def user_book_params
-    params.permit(:user_id, :book_id, :read)
+    params.permit(:book_id, :read)
   end
 end
