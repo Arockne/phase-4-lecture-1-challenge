@@ -16,6 +16,11 @@ class UserBooksController < ApplicationController
     render json: user_book, status: :ok
   end
 
+  def destroy
+    user_book = current_user.user_books.find(params[:id])
+    user_book.destroy
+  end
+
   private
 
   def user_book_params
