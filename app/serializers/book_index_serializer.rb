@@ -1,3 +1,3 @@
 class BookIndexSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :title, :author, :description, :cover_image_url
 end
